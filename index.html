@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio Reflexivo Digital · Isaque</title>
+<meta name="description" content="Trabalho de Conclusão de Curso da Formação de Docentes: do olhar de aluno ao olhar de docente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --board:#1d3b34; --board-2:#16302a; --chalk:#f4f6f3; --pencil:#f0b73e;
+  --bg:#f5f7f6; --surface:#ffffff; --ink:#1b2422; --muted:#5b6865; --line:#d9e0dd;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#101816; --surface:#16211e; --ink:#e8eeeb; --muted:#9db0aa; --line:#2a3a35;}
+}
+:root[data-theme="dark"]{--bg:#101816; --surface:#16211e; --ink:#e8eeeb; --muted:#9db0aa; --line:#2a3a35;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.15rem;line-height:1.75}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pencil);outline-offset:3px;border-radius:4px}
+
+/* navegação */
+nav{position:sticky;top:0;z-index:10;background:var(--board-2);border-bottom:1px solid #ffffff1f}
+nav ul{list-style:none;margin:0 auto;padding:0 1rem;max-width:1000px;display:flex;gap:.25rem;overflow-x:auto}
+nav a{display:block;padding:1rem .9rem;color:#cfdad6;text-decoration:none;font-family:var(--display);font-weight:500;font-size:.95rem;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{color:#fff;border-bottom-color:var(--pencil)}
+
+/* abertura */
+header.hero{background:var(--board);color:var(--chalk);padding:clamp(3.5rem,10vw,7.5rem) 1.25rem clamp(3rem,8vw,6rem)}
+.hero-in{max-width:1000px;margin:0 auto}
+.hero p.tcc{font-family:var(--display);font-weight:500;font-size:1rem;color:#b9c9c3;margin:0 0 1.5rem}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,8.5vw,6rem);line-height:1;letter-spacing:-.03em;margin:0;max-width:13ch}
+.hero .sub{margin:1.75rem 0 0;max-width:34rem;font-size:1.3rem;color:#d7e2de}
+.hero .autor{margin:2.5rem 0 0;display:flex;align-items:center;gap:.9rem;font-family:var(--display);font-weight:500}
+.hero .autor::before{content:"";width:3rem;height:4px;background:var(--pencil);border-radius:2px}
+
+/* linha do tempo */
+main{max-width:1000px;margin:0 auto;padding:0 1.25rem}
+.eixo{display:grid;grid-template-columns:150px 1fr;gap:0 2.5rem;padding:clamp(3rem,7vw,5.5rem) 0;border-bottom:1px solid var(--line)}
+.eixo:last-of-type{border-bottom:0}
+.marca{position:relative}
+.marca .fase{position:sticky;top:90px;font-family:var(--display)}
+.marca b{display:block;font-size:2rem;font-weight:800;line-height:1.05;letter-spacing:-.02em}
+.marca span{display:block;margin-top:.35rem;color:var(--muted);font-size:.95rem;line-height:1.4}
+.marca i{display:block;width:2.5rem;height:4px;background:var(--pencil);border-radius:2px;margin-bottom:.9rem}
+.corpo{max-width:40rem;min-width:0}
+.corpo h2{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,4.5vw,2.8rem);line-height:1.08;letter-spacing:-.025em;margin:0 0 .4rem}
+.corpo h3{font-family:var(--display);font-weight:700;font-size:1.25rem;margin:2.2rem 0 .2rem}
+.corpo p{margin:1rem 0}
+.corpo .lead{font-size:1.3rem;color:var(--muted);margin-top:.5rem}
+.destaque{border-left:4px solid var(--pencil);padding:.25rem 0 .25rem 1.25rem;margin:1.75rem 0;font-style:italic;font-size:1.25rem}
+
+/* fotos */
+figure{margin:2rem 0}
+figure img{border-radius:14px;width:100%;height:auto}
+figcaption{margin-top:.7rem;font-size:.98rem;color:var(--muted);line-height:1.55}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin-top:1.5rem}
+.galeria img{aspect-ratio:3/4;object-fit:cover;border-radius:12px;width:100%}
+.galeria-wrap{margin:2rem 0}
+.galeria-wrap figcaption{margin-top:.9rem}
+.foto-turma{max-width:420px}
+
+/* carta */
+.carta{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(1.5rem,5vw,3rem);box-shadow:0 1px 0 var(--line);position:relative}
+.carta::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:var(--pencil);border-radius:6px 6px 0 0}
+.carta .para{font-family:var(--display);font-weight:700;font-size:1.3rem;margin:0 0 1rem}
+.carta .assina{margin-top:1.5rem;font-family:var(--display);font-weight:700;font-size:1.3rem}
+
+footer{background:var(--board-2);color:#b9c9c3;padding:2.5rem 1.25rem;font-family:var(--display);font-size:.95rem}
+footer div{max-width:1000px;margin:0 auto}
+
+@media (max-width:760px){
+  body{font-size:1.1rem}
+  .eixo{grid-template-columns:1fr;gap:1.25rem}
+  .marca .fase{position:static;display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+  .marca i{display:none}
+  .marca b{font-size:1.5rem}
+  .marca span{margin:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Navegação principal">
+  <ul>
+    <li><a href="#inicio">Início</a></li>
+    <li><a href="#eixo1">1º ano</a></li>
+    <li><a href="#eixo2">2º ano</a></li>
+    <li><a href="#eixo3">3º ano</a></li>
+    <li><a href="#eixo4">Daqui a 5 anos</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="hero-in">
+    <p class="tcc">Trabalho de Conclusão de Curso · Formação de Docentes</p>
+    <h1>Do olhar de aluno ao olhar de docente</h1>
+    <p class="sub">Portfólio reflexivo digital sobre três anos de curso: as escolhas, os autores, a sala de aula e o educador que me comprometo a ser.</p>
+    <p class="autor">Isaque</p>
+  </div>
+</header>
+
+<main>
+
+<!-- EIXO 1 -->
+<section class="eixo" id="eixo1" aria-labelledby="t1">
+  <div class="marca"><div class="fase"><i></i><b>1º ano</b><span>O olhar de aluno</span></div></div>
+  <div class="corpo">
+    <h2 id="t1">O ponto de partida</h2>
+    <p>Confesso que a escolha pela Formação de Docentes não nasceu de uma vocação declarada desde a infância. Ao concluir o Ensino Fundamental, eu sabia o que não queria: não me identificava com o curso de Agro e tampouco desejava seguir o Ensino Médio regular, que, para mim, parecia superficial e tumultuado, com muitos colegas aparentemente desinteressados em aprender. A Formação de Docentes surgiu, então, como uma alternativa interessante, que prometia um ambiente diferente e um aprofundamento maior.</p>
+    <p>No início do curso, minha ideia sobre “ser professor” era bastante limitada. Eu imaginava que se tratava apenas de algumas disciplinas a mais, com uma base teórica sobre a docência, e que, depois, seria necessário cursar uma graduação para, de fato, lecionar nos anos iniciais do Ensino Fundamental. Não esperava que o curso me colocasse tão cedo diante da realidade da sala de aula.</p>
+    <p>Ao longo do primeiro ano, essa visão foi se transformando. Percebi que, além da teoria, o curso exigia muita prática, com vivências nas escolas e nos CMEIs, e que eu sairia da formação já habilitado para atuar como professor. Esse foi o primeiro grande choque de expectativa: o que eu julgava ser raso revelou-se profundo, exigente e muito mais prático do que eu previa.</p>
+    <p>O primeiro ano foi, sobretudo, um período de descobertas. Precisei me adaptar a uma rotina nova, compreender a proposta do curso, conhecer pessoas e formar vínculos. Foi nessa fase que surgiram as primeiras amizades e os grupos que me acompanhariam depois. Alguns colegas seguiram outros caminhos, e outros permaneceram. Ao final do ano, já ciente do que o curso exigia, tive que decidir se continuaria. Decidi permanecer, porque me identifiquei com a proposta e percebi que valia a pena. Ali, deixei de ser apenas um aluno que cursava a Formação de Docentes por exclusão e passei a escolhê-la por convicção.</p>
+    <figure class="foto-turma">
+      <img src="fotos/eixo1-turma.jpg" alt="Turma do curso reunida na entrada da escola José Salles, com fantasias de Halloween" loading="lazy">
+      <figcaption>Visita de Halloween à escola José Salles, ainda no 1º ano do curso. Entre fantasias e brincadeiras, a turma se aproximou e eu comecei a perceber que a Formação de Docentes ia muito além da sala de aula. Este registro representa o início da minha caminhada: os vínculos, as descobertas e a decisão de continuar.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- EIXO 2 -->
+<section class="eixo" id="eixo2" aria-labelledby="t2">
+  <div class="marca"><div class="fase"><i></i><b>2º ano</b><span>A transição</span></div></div>
+  <div class="corpo">
+    <h2 id="t2">A descoberta da teoria e da sala de aula</h2>
+    <h3>O autor que mudou meu olhar</h3>
+    <p>Entre os autores estudados ao longo do curso, Paulo Freire foi o que mais transformou a minha maneira de compreender a educação. Antes de conhecê-lo, eu tinha uma visão limitada do papel do professor, quase restrita a transmitir conteúdos. Com Freire, aprendi que ensinar é, antes de tudo, um ato de amor, respeito e igualdade. Educar não é depositar conhecimento em quem “nada sabe”, mas reconhecer cada criança como sujeito, com uma história, uma bagagem e uma voz que merecem ser ouvidas.</p>
+    <p>Essa concepção mudou meu olhar sobre a aprendizagem: passei a entender que o vínculo afetivo e o respeito mútuo não são um detalhe da prática docente, mas a base dela. Levo esse aprendizado como um compromisso: ensinar com afeto, tratar todos os alunos com dignidade e garantir que cada um tenha as mesmas oportunidades de aprender.</p>
+    <h3>O impacto das primeiras observações de estágio</h3>
+    <p>Se a teoria transformou meu olhar, as primeiras observações de estágio o ampliaram ainda mais. Eu chegava à escola com uma visão ingênua da infância, imaginando que a criança vivia uma fase leve, sem preocupações. Nas duas ou três primeiras observações, essa ideia se desfez.</p>
+    <p>Percebi que muitas crianças chegam à escola carregando realidades difíceis: algumas encontram ali sua principal refeição, outras não recebem em casa os cuidados básicos de higiene e dependem da escola para isso, e há aquelas que convivem com a ausência dos pais ou com a falta de acompanhamento familiar. Também notei situações de negligência que passam despercebidas pela própria família, como a de crianças com laudo que não recebem o devido acompanhamento.</p>
+    <p>Essa vivência me ensinou a olhar o comportamento da criança com mais cuidado e menos julgamento. Quem fala pouco, quem se isola, quem agride ou quem se agita demais pode estar comunicando algo que não consegue dizer com palavras. Entendi que a escola, muitas vezes, é o único espaço de acolhimento e proteção que a criança possui, e que a docência exige sensibilidade para enxergar o que está por trás de cada atitude.</p>
+  </div>
+</section>
+
+<!-- EIXO 3 -->
+<section class="eixo" id="eixo3" aria-labelledby="t3">
+  <div class="marca"><div class="fase"><i></i><b>3º ano</b><span>O olhar de docente</span></div></div>
+  <div class="corpo">
+    <h2 id="t3">A prática e o protagonismo</h2>
+    <p>Ao longo do curso, realizei quatro regências: duas na Educação Infantil, no CMEI Raimunda Santana Salles (Infantil 4F e Infantil 4E), e duas nos Anos Iniciais do Ensino Fundamental, na Escola Benedito Salles (3º ano D e 3º ano E). Essas experiências foram decisivas para compreender que dar aula, embora desafiador, não é um “bicho de sete cabeças”.</p>
+    <p>Logo no primeiro impacto, descobri que as crianças compreendem muito mais do que eu imaginava. Eu acreditava que precisaria simplificar demais a linguagem, mas percebi que elas entendem a explicação quando a fala é clara e acolhedora. Também me surpreendi com o vínculo afetivo: as crianças gostam do professor que ensina, e reencontrá-las depois, fora da escola, e ouvir “foi esse que me deu aula” foi muito gratificante.</p>
+    <h3>Um desafio real</h3>
+    <p>O maior desafio foi lidar com os diferentes ritmos de aprendizagem em uma mesma sala. Em uma das regências, no 3º ano D, dois alunos concluíram a atividade em cerca de dez minutos, enquanto outros, que ainda tinham dificuldade para formar sílabas, levaram mais de duas horas para finalizar a primeira tarefa. Essa diferença mostrou que uma única atividade não atende a todos.</p>
+    <p>Para lidar com isso, passei a levar atividades de reserva para os alunos que terminavam mais rápido, evitando a ociosidade e a dispersão da turma. Hoje, entendo que isso ainda não basta: o ideal seria planejar atividades em diferentes níveis de complexidade desde o início e dedicar mais atenção individual aos alunos com maior dificuldade, respeitando o tempo de cada um.</p>
+    <p>Também aprendi que a escola tem um papel importante ao perceber sinais de que uma criança pode precisar de acompanhamento especializado. Cabe ao professor observar, registrar e orientar a família sobre os caminhos possíveis, ainda que a decisão final seja dela. Percebi como o apoio familiar faz diferença, independentemente da condição financeira.</p>
+    <p>Por fim, essas regências transformaram minha visão sobre a profissão. Antes, eu tinha receio de ser professor, por ouvir de fora que o docente não é respeitado nem apoiado. Na prática, descobri que há mais apoio do que se imagina e que, apesar dos desafios, é possível trabalhar com dedicação. Hoje não teria receio de atuar na área.</p>
+    <figure class="galeria-wrap">
+      <div class="galeria">
+        <img src="fotos/eixo3-bandeira-maos.jpg" alt="Criança pintando a palma da mão no painel do 7 de Setembro, em que as mãos formam a bandeira do Brasil" loading="lazy">
+        <img src="fotos/eixo3-mao-guiada.jpg" alt="Mão adulta guiando a mão de uma criança sobre a tinta no painel da bandeira" loading="lazy">
+        <img src="fotos/eixo3-mao-tinta-azul.jpg" alt="Palma da mão de uma criança coberta de tinta azul" loading="lazy">
+        <img src="fotos/eixo3-natureza-folhas.jpg" alt="Mãos de uma criança colando folhas secas em uma árvore no painel Natureza" loading="lazy">
+        <img src="fotos/eixo3-desenhos-coloridos.jpg" alt="Desenhos de árvore sendo coloridos por crianças com lápis de cor" loading="lazy">
+      </div>
+      <figcaption>Atividades aplicadas na Educação Infantil: painel do 7 de Setembro, em que cada criança deixou a marca da própria mão para compor a bandeira do Brasil, e painel “Natureza”, com colagem de folhas em uma árvore, além de desenho para colorir. As propostas uniram expressão artística, coordenação motora e trabalho coletivo, respeitando o ritmo de cada criança.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- EIXO 4 -->
+<section class="eixo" id="eixo4" aria-labelledby="t4">
+  <div class="marca"><div class="fase"><i></i><b>Daqui a 5 anos</b><span>A projeção</span></div></div>
+  <div class="corpo">
+    <h2 id="t4">Carta ao futuro professor</h2>
+    <p class="lead">Que tipo de educador eu me comprometo a ser?</p>
+    <article class="carta">
+      <p class="para">Querido Isaque do futuro,</p>
+      <p>Escrevo esta carta como alguém que acaba de concluir a Formação de Docentes e que, mais do que um diploma, leva consigo muitas aprendizagens. Quero que você se lembre de quem eu fui nesta etapa e do tipo de educador que me comprometi a ser.</p>
+      <p>Prometo ser um profissional comprometido, que busca metodologias criativas e dinâmicas, para que a aula seja um momento interessante e não cansativo. Mas quero ir além: quero ser um professor que os alunos queiram ter por perto.</p>
+      <p>Ao longo da minha trajetória como aluno, tive o privilégio de conviver com professores muito queridos. Aprendi com eles que respeito gera respeito, que o modo de falar importa e que compreender o lado emocional do estudante faz toda a diferença. Também vivenciei situações em que a falta de compreensão afastou os alunos e enfraqueceu o vínculo. Por conhecer os dois lados, o de aluno e o de futuro docente, comprometo-me a ser o mais compreensivo possível, sem abrir mão do compromisso e da responsabilidade que a profissão exige. Sei que existem limites, mas prometo ouvir antes de julgar e oferecer uma segunda chance quando for justo.</p>
+      <p>Prometo ser um professor observador. Quero estar atento aos sinais de que um aluno precisa de ajuda, para nunca ignorar um pedido silencioso. No caso das crianças pequenas, quero estar atento às que possam precisar de acompanhamento especializado e me aproximar das famílias, orientando e integrando-as ao processo. Como aprendi com Paulo Freire, educar é um ato de amor, respeito e igualdade, e é assim que pretendo conduzir minha prática.</p>
+      <p>Quero ser um educador amável, mas não ausente de rigor: alguém que ensina de verdade, com aulas boas de assistir e um ambiente em que o aluno se sinta seguro para perguntar, conversar e até desabafar.</p>
+      <p>Que eu nunca me esqueça de que, por trás de cada aluno, existe uma história. E que eu seja, para cada um deles, um professor que faz diferença.</p>
+      <p class="assina">Com carinho,<br>Isaque</p>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>Portfólio Reflexivo Digital · Trabalho de Conclusão de Curso · Formação de Docentes · 2026</div>
+</footer>
+
+</body>
+</html>
